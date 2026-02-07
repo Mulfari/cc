@@ -5,125 +5,162 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fari Envíos | Tu esfuerzo llega siempre a casa</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --apple-blue: #007aff;
-            --apple-gray: #1d1d1f;
-            --apple-bg: #f5f5f7;
+            --brand-blue: #0071e3;
+            --brand-bg: #f5f5f7;
+            --brand-text: #1d1d1f;
         }
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
-            background-color: var(--apple-bg); 
-            color: var(--apple-gray);
-            overflow-x: hidden;
+            background-color: var(--brand-bg); 
+            color: var(--brand-text);
             -webkit-font-smoothing: antialiased;
         }
-        .text-balance { text-wrap: balance; }
-        .hero-title {
-            letter-spacing: -0.04em;
-            line-height: 1.05;
+        .apple-gradient {
+            background: radial-gradient(circle at 50% -20%, #ffffff 0%, #f5f5f7 100%);
         }
-        .btn-apple {
-            background: var(--apple-blue);
-            color: white;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        .nav-blur {
+            backdrop-filter: saturate(180%) blur(20px);
+            background: rgba(245, 245, 247, 0.7);
         }
-        .btn-apple:hover {
+        .btn-primary {
+            background: var(--brand-blue);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-primary:hover {
             transform: scale(1.02);
-            filter: brightness(1.1);
-            box-shadow: 0 20px 40px rgba(0, 122, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 113, 227, 0.3);
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
+        @keyframes reveal {
+            from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        .animate-reveal { animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        .animate-reveal { animation: reveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
     </style>
 </head>
-<body class="selection:bg-blue-100 selection:text-blue-900">
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 backdrop-blur-xl bg-white/70 border-b border-gray-200">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <div class="text-xl font-bold tracking-tight">Fari Envíos</div>
-            <div class="hidden md:flex items-center gap-8 text-[12px] font-semibold tracking-wide uppercase opacity-60">
-                <a href="#destinos">Destinos</a>
-                <a href="#proceso">Proceso</a>
-                <a href="#seguridad">Seguridad</a>
+<body class="selection:bg-blue-100 selection:text-blue-900 overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-[100] nav-blur border-b border-gray-200/50 transition-all">
+        <div class="max-w-6xl mx-auto px-6 h-12 flex items-center justify-between">
+            <div class="text-lg font-bold tracking-tight">Fari Envíos</div>
+            <div class="hidden md:flex gap-8 text-[11px] font-semibold tracking-wide uppercase opacity-70">
+                <a href="#proceso" class="hover:text-blue-600 transition-colors">Proceso</a>
+                <a href="#destinos" class="hover:text-blue-600 transition-colors">Destinos</a>
+                <a href="#garantia" class="hover:text-blue-600 transition-colors">Garantía</a>
             </div>
-            <a href="https://wa.me/726567607" class="btn-apple px-6 py-2 rounded-full text-sm font-bold">
+            <a href="https://wa.me/726567607" class="btn-primary text-white px-5 py-1.5 rounded-full text-[12px] font-bold">
                 Iniciar
             </a>
         </div>
     </nav>
 
-    <main>
+    <main class="apple-gradient">
         <!-- Hero Section -->
-        <section class="min-h-screen flex flex-col items-center justify-center pt-20 px-6 text-center">
-            <div class="max-w-4xl mx-auto">
-                <p class="animate-reveal [animation-delay:200ms] text-blue-600 font-bold tracking-widest text-xs uppercase mb-6">Sovereign Remittance Infrastructure</p>
-                <h1 class="animate-reveal [animation-delay:400ms] hero-title text-6xl md:text-[8rem] font-extrabold mb-8 text-balance">
+        <section class="min-h-screen flex flex-col items-center justify-center pt-24 px-6 relative">
+            <div class="max-w-5xl mx-auto text-center">
+                <div class="animate-reveal [animation-delay:200ms] inline-block px-4 py-1 rounded-full bg-blue-50 text-blue-600 text-[10px] font-bold tracking-widest uppercase mb-8 border border-blue-100">
+                    Sovereign Remittance Platform v1.0
+                </div>
+                <h1 class="animate-reveal [animation-delay:400ms] text-5xl md:text-[7.5rem] font-extrabold tracking-tighter leading-[0.9] mb-12">
                     Tu esfuerzo llega <br> <span class="text-blue-600">siempre a casa.</span>
                 </h1>
-                <p class="animate-reveal [animation-delay:600ms] text-xl md:text-2xl text-gray-500 font-medium max-w-2xl mx-auto mb-12 text-balance leading-relaxed">
-                    Envíos de remesas de España a Latinoamérica con la precisión y el diseño que tu familia merece.
+                <p class="animate-reveal [animation-delay:600ms] text-xl md:text-2xl text-gray-500 font-medium max-w-2xl mx-auto mb-16 leading-tight">
+                    Infraestructura técnica para envíos de remesas de España a Latinoamérica. Seguridad, rapidez y transparencia absoluta.
                 </p>
-                <div class="animate-reveal [animation-delay:800ms]">
-                    <a href="https://wa.me/726567607" class="btn-apple px-12 py-5 rounded-full text-xl font-bold inline-flex items-center gap-4">
-                        Comenzar envío
-                        <span class="opacity-40">|</span>
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                <div class="animate-reveal [animation-delay:800ms] flex flex-col md:flex-row gap-6 justify-center items-center">
+                    <a href="https://wa.me/726567607" class="btn-primary text-white px-12 py-5 rounded-full text-lg font-bold">
+                        Comenzar Envío
                     </a>
+                    <p class="text-[12px] font-bold text-gray-400 uppercase tracking-widest">
+                        Liquidación en <span class="text-blue-600">60 minutos</span>
+                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- Route Grid -->
+        <!-- Dynamic Grid Section -->
         <section id="destinos" class="py-40 bg-white">
             <div class="max-w-6xl mx-auto px-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    {['Venezuela', 'Colombia', 'Panamá', 'Rep. Dominicana'].map((country) => (
-                        <div key={country} class="group p-12 bg-[#f5f5f7] rounded-[2.5rem] transition-all hover:bg-white hover:shadow-2xl hover:shadow-gray-200 cursor-pointer">
-                            <div class="flex justify-between items-start mb-20">
-                                <div class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold">
-                                    {country[0]}
-                                </div>
-                                <div class="text-[10px] font-bold uppercase tracking-widest opacity-30">Status: Active</div>
-                            </div>
-                            <h3 class="text-4xl font-extrabold tracking-tight mb-4">{country}</h3>
-                            <p class="text-gray-500 font-medium leading-relaxed">Infraestructura de liquidación directa para transferencias inmediatas y seguras.</p>
+                <div class="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
+                    <h2 class="text-4xl md:text-6xl font-extrabold tracking-tighter">Corredores <br> de transferencia.</h2>
+                    <p class="text-gray-400 max-w-xs font-medium italic uppercase text-[10px] tracking-widest">Sincronización de nodos regionales activa.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="group p-12 bg-gray-50 rounded-[3rem] transition-all hover:bg-blue-600 hover:text-white">
+                        <div class="mb-16 flex justify-between items-center">
+                            <span class="text-sm font-bold uppercase tracking-widest opacity-50">Nodo 01</span>
+                            <span class="text-3xl">🇻🇪</span>
                         </div>
-                    ))}
+                        <h3 class="text-4xl font-extrabold tracking-tight mb-4">Venezuela</h3>
+                        <p class="opacity-70 font-medium mb-8">Pago móvil y transferencias directas a todos los bancos nacionales. Tasa preferencial diaria.</p>
+                        <div class="h-1 w-12 bg-blue-600 group-hover:bg-white transition-colors"></div>
+                    </div>
+
+                    <div class="group p-12 bg-gray-50 rounded-[3rem] transition-all hover:bg-blue-600 hover:text-white">
+                        <div class="mb-16 flex justify-between items-center">
+                            <span class="text-sm font-bold uppercase tracking-widest opacity-50">Nodo 02</span>
+                            <span class="text-3xl">🇨🇴</span>
+                        </div>
+                        <h3 class="text-4xl font-extrabold tracking-tight mb-4">Colombia</h3>
+                        <p class="opacity-70 font-medium mb-8">Nequi, Daviplata y Bancolombia. Liquidación instantánea bajo TRM oficial.</p>
+                        <div class="h-1 w-12 bg-blue-600 group-hover:bg-white transition-colors"></div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Trust Section -->
-        <section class="py-40 bg-[#f5f5f7]">
-            <div class="max-w-4xl mx-auto px-6 text-center">
-                <h2 class="text-5xl font-extrabold tracking-tight mb-12">Soberanía técnica en cada centavo.</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="p-8">
-                        <div class="text-3xl font-extrabold text-blue-600 mb-2">0.0%</div>
-                        <p class="font-bold text-gray-500 text-sm uppercase tracking-widest">Ocultos</p>
+        <!-- Process Section -->
+        <section id="proceso" class="py-40">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-20">
+                    <div>
+                        <div class="text-6xl font-extrabold text-blue-100 mb-8">01.</div>
+                        <h4 class="text-xl font-bold mb-4 uppercase tracking-tighter">Cotización</h4>
+                        <p class="text-gray-500 font-medium">Verifica la tasa del día a través de nuestro canal de WhatsApp. Sin sorpresas.</p>
                     </div>
-                    <div class="p-8">
-                        <div class="text-3xl font-extrabold text-blue-600 mb-2">256bit</div>
-                        <p class="font-bold text-gray-500 text-sm uppercase tracking-widest">Encriptación</p>
+                    <div>
+                        <div class="text-6xl font-extrabold text-blue-100 mb-8">02.</div>
+                        <h4 class="text-xl font-bold mb-4 uppercase tracking-tighter">Depósito</h4>
+                        <p class="text-gray-500 font-medium">Realiza tu transferencia segura desde cualquier banco en España.</p>
                     </div>
-                    <div class="p-8">
-                        <div class="text-3xl font-extrabold text-blue-600 mb-2">&lt;60m</div>
-                        <p class="font-bold text-gray-500 text-sm uppercase tracking-widest">Liquidación</p>
+                    <div>
+                        <div class="text-6xl font-extrabold text-blue-100 mb-8">03.</div>
+                        <h4 class="text-xl font-bold mb-4 uppercase tracking-tighter">Recepción</h4>
+                        <p class="text-gray-500 font-medium">En menos de 60 minutos, tu familia recibe el dinero en su moneda local.</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section id="garantia" class="py-40 bg-white">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <div class="w-20 h-20 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-12">
+                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                </div>
+                <h2 class="text-5xl font-extrabold tracking-tighter mb-8">Seguridad de grado bancario.</h2>
+                <p class="text-xl text-gray-500 font-medium mb-12 leading-tight">Cada transacción está respaldada por nuestra infraestructura de seguridad atómica.</p>
+                <a href="https://wa.me/726567607" class="btn-primary text-white px-12 py-5 rounded-full text-xl font-bold">
+                    Iniciar mi primer envío
+                </a>
             </div>
         </section>
     </main>
 
-    <footer class="py-20 bg-white border-t border-gray-100">
+    <footer class="py-20 bg-gray-50 border-t border-gray-200">
         <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-12">
-            <div class="text-xl font-bold tracking-tight">Fari Envíos.</div>
-            <div class="text-[11px] font-bold text-gray-400 uppercase tracking-widest">© 2026 Sovereign Stack // Nexus Core</div>
+            <div class="text-lg font-bold tracking-tight">Fari Envíos.</div>
+            <div class="flex gap-8 text-[10px] font-bold text-gray-400 uppercase tracking-[0.3em]">
+                <span>Status: Operational</span>
+                <span>Latency: 14ms</span>
+                <span>Node: ES-MAD-01</span>
+            </div>
+            <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest opacity-50">
+                © 2026 Sovereign Infrastructure.
+            </div>
         </div>
     </footer>
 </body>
