@@ -1,0 +1,30 @@
+{
+  "name": "cero-complicado",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --webpack",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jscmulfari/fari-envios-sovereign.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jscmulfari/fari-envios-sovereign/issues"
+  },
+  "homepage": "https://github.com/Jscmulfari/fari-envios-sovereign#readme",
+  "description": "",
+  "dependencies": {
+    "motion": "^12.34.2",
+    "next": "^16.0.0",
+    "prop-types": "^15.8.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-simple-maps": "^3.0.0"
+  }
+}
