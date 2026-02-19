@@ -6,7 +6,7 @@ import {
   Geographies,
   Geography,
   Sphere,
-} from "react-simple-maps";
+} from "@vnedyalk0v/react19-simple-maps";
 
 const geoUrl =
   "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
