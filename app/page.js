@@ -1,4 +1,4 @@
-import WorldMap from "./components/WorldMap";
+import HeroBackground from "./components/HeroBackground";
 
 export default function HomePage() {
   return (
@@ -40,36 +40,26 @@ export default function HomePage() {
 
       <main>
         <section id="inicio" className="ref-hero">
-          <WorldMap />
+          <HeroBackground />
           <div className="ref-hero-content">
             <div className="hero-grid">
               <div>
-                <p className="ref-eyebrow">Plataforma de remesas empresarial</p>
+                <p className="ref-eyebrow">Remesas simples</p>
                 <h1 className="ref-hero-title">
-                  Envios rapidos.
+                  Envíos rápidos.
                   <br />
-                  <span>Control total.</span>
+                  <span>Cero complicaciones.</span>
                 </h1>
                 <p className="ref-hero-copy">
-                  CERO COMPLICADO centraliza tus remesas con ejecucion inteligente,
-                  confirmaciones en tiempo real y soporte experto en cada operacion.
+                  Envía en minutos, con tasa clara y confirmación en tiempo real.
                 </p>
-                <div className="hero-actions">
-                  <a className="hero-primary" href="https://wa.me/726567607" target="_blank" rel="noreferrer">
-                    Iniciar envio
-                  </a>
-                  <a className="hero-secondary" href="#destinos">
-                    Ver cobertura
-                  </a>
-                </div>
+                <a className="hero-inline-link" href="#destinos">
+                  Ver cobertura
+                </a>
                 <div className="hero-metrics" aria-label="Indicadores principales">
                   <article>
                     <strong>&lt; 60 min</strong>
                     <span>Tiempo promedio</span>
-                  </article>
-                  <article>
-                    <strong>99.9%</strong>
-                    <span>Trazabilidad</span>
                   </article>
                   <article>
                     <strong>24/7</strong>
@@ -77,19 +67,27 @@ export default function HomePage() {
                   </article>
                 </div>
               </div>
-              <aside className="hero-quote" aria-label="Panel de cotizacion">
-                <p className="quote-label">Panel en vivo</p>
-                <h3>Cotizacion inteligente</h3>
-                <p className="quote-copy">
-                  Obten una tasa clara, validacion automatica y confirmacion de
-                  entrega con visibilidad punta a punta.
-                </p>
-                <ul className="quote-list">
-                  <li>Estado operativo en tiempo real</li>
-                  <li>Notificaciones por cada etapa</li>
-                  <li>Ejecucion priorizada por IA</li>
-                </ul>
-              </aside>
+            </div>
+          </div>
+        </section>
+
+        <section className="ref-steps" aria-label="Proceso de envío">
+          <div className="ref-steps-inner">
+            <p className="ref-steps-eyebrow">Proceso simple</p>
+            <h2>Envía en 3 pasos</h2>
+            <div className="ref-steps-grid">
+              <article className="ref-step-card">
+                <strong>1. Cotización inmediata</strong>
+                <p>Te compartimos tasa clara y monto final por WhatsApp.</p>
+              </article>
+              <article className="ref-step-card">
+                <strong>2. Validación rápida</strong>
+                <p>Confirmamos datos y activamos el envío en minutos.</p>
+              </article>
+              <article className="ref-step-card">
+                <strong>3. Confirmación final</strong>
+                <p>Recibes notificación cuando el dinero fue entregado.</p>
+              </article>
             </div>
           </div>
         </section>
