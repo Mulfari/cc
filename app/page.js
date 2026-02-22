@@ -1,4 +1,6 @@
 import HeroBackground from "./components/HeroBackground";
+import RemotionVideoPlayer from "./components/RemotionVideoPlayer";
+import CoverageSelector from "./components/CoverageSelector";
 
 export default function HomePage() {
   return (
@@ -55,6 +57,7 @@ export default function HomePage() {
                 </p>
                 <a className="hero-inline-link" href="#destinos">
                   Ver cobertura
+                  <span className="hero-inline-arrow" aria-hidden="true">→</span>
                 </a>
                 <div className="hero-metrics" aria-label="Indicadores principales">
                   <article>
@@ -68,6 +71,17 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="ref-video" aria-label="Demo del proceso de envío">
+          <div className="ref-video-inner">
+            <p className="ref-video-eyebrow">Así funciona</p>
+            <h2>Envío en segundos</h2>
+            <p className="ref-video-copy">
+              Simula una conversación real con nuestro bot. Solicita, envía tu documento y recibe confirmación al instante.
+            </p>
+            <RemotionVideoPlayer />
           </div>
         </section>
 
@@ -93,40 +107,12 @@ export default function HomePage() {
         </section>
 
         <section id="destinos" className="ref-routes">
-          <h2>Nodos Activos.</h2>
-          <div className="ref-routes-grid">
-            <article className="ref-route-card">
-              <div className="ref-route-head">
-                <span className="ref-flag">🇻🇪</span>
-                <span className="ref-node">Node_01</span>
-              </div>
-              <h3>Venezuela</h3>
-              <p>
-                Liquidación inmediata vía Pago Móvil y transferencias directas a
-                todos los bancos.
-              </p>
-            </article>
-
-            <article className="ref-route-card">
-              <div className="ref-route-head">
-                <span className="ref-flag">🇨🇴</span>
-                <span className="ref-node">Node_02</span>
-              </div>
-              <h3>Colombia</h3>
-              <p>
-                Conexión directa con Bancolombia, Nequi y Daviplata. Tasa real
-                garantizada.
-              </p>
-            </article>
-          </div>
+          <h2>Cobertura</h2>
+          <CoverageSelector />
         </section>
 
         <footer className="ref-footer">
           <div>© 2026 CERO COMPLICADO.</div>
-          <div className="ref-footer-right">
-            <span className="ref-systems">Sovereign Systems</span>
-            <span>Node: Madrid</span>
-          </div>
         </footer>
       </main>
     </>
