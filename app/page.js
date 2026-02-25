@@ -1,11 +1,12 @@
-import HeroBackground from "./components/HeroBackground";
+import ThreeHeroScene from "./prueba/ThreeHeroScene";
 import RemotionVideoPlayer from "./components/RemotionVideoPlayer";
 import CoverageSelector from "./components/CoverageSelector";
 
 export default function HomePage() {
   return (
     <>
-      <header className="ref-nav">
+      <header className="ref-nav" role="banner">
+        <div className="ref-nav-bubble">
         <div className="ref-nav-shell">
           <a className="ref-brand-wrap" href="#inicio" aria-label="Ir al inicio">
             <span className="ref-brand-top">CERO</span>
@@ -19,6 +20,7 @@ export default function HomePage() {
             </span>
             <span className="ref-chat-text">Soporte</span>
           </a>
+        </div>
         </div>
       </header>
 
@@ -42,7 +44,9 @@ export default function HomePage() {
 
       <main>
         <section id="inicio" className="ref-hero">
-          <HeroBackground />
+          <div className="hero-nebula" aria-hidden="true" />
+          <ThreeHeroScene className="ref-hero-three-bg" />
+          <div className="hero-bottom-fade" aria-hidden="true" />
           <div className="ref-hero-content">
             <div className="hero-grid">
               <div>
