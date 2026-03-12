@@ -1,20 +1,19 @@
 import "./globals.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://cerocomplicado.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://enviosmanda.com";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
-  applicationName: "CERO COMPLICADO",
+  applicationName: "Envios Manda",
   title: {
-    default: "CERO COMPLICADO | Envía dinero sin complicaciones",
-    template: "%s | CERO COMPLICADO",
+    default: "Envios Manda | Envía dinero sin complicaciones",
+    template: "%s | Envios Manda",
   },
   description:
-    "CERO COMPLICADO: remesas sin complicaciones impulsadas por IA, con soporte humano y proceso claro.",
+    "Envios Manda: remesas sin complicaciones impulsadas por IA, con soporte humano y proceso claro.",
   keywords: [
-    "cero complicado",
-    "cero.complicado",
-    "0 complicado",
+    "envios manda",
+    "enviosmanda",
     "remesas",
     "envío de dinero",
     "remesas con ia",
@@ -25,17 +24,17 @@ export const metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "CERO COMPLICADO | Envía dinero sin complicaciones",
+    title: "Envios Manda | Envía dinero sin complicaciones",
     description:
       "Remesas sin complicaciones impulsadas por IA con un proceso rápido, claro y humano.",
     url: "/",
-    siteName: "CERO COMPLICADO",
+    siteName: "Envios Manda",
     locale: "es_ES",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "CERO COMPLICADO | Envía dinero sin complicaciones",
+    title: "Envios Manda | Envía dinero sin complicaciones",
     description:
       "Remesas impulsadas por IA con proceso simple, acompañamiento humano y confirmación en cada envío.",
   },

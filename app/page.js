@@ -9,8 +9,8 @@ export default function HomePage() {
         <div className="ref-nav-bubble">
         <div className="ref-nav-shell">
           <a className="ref-brand-wrap" href="#inicio" aria-label="Ir al inicio">
-            <span className="ref-brand-top">CERO</span>
-            <span className="ref-brand-bottom">COMPLICADO</span>
+            <span className="ref-brand-top">ENVIOS</span>
+            <span className="ref-brand-bottom">MANDA</span>
           </a>
           <a className="ref-chat-link" href="https://wa.me/726567607" target="_blank" rel="noreferrer">
             <span className="ref-chat-icon" aria-hidden="true">
@@ -83,7 +83,7 @@ export default function HomePage() {
         </section>
 
         <footer className="ref-footer">
-          <div>© 2026 CERO COMPLICADO.</div>
+          <div>© 2026 Envios Manda.</div>
         </footer>
       </main>
     </>
